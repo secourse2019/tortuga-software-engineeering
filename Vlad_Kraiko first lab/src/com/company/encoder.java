@@ -5,11 +5,13 @@ class Encoder {
     public int col;
     public String text;
     public int[][] Cube;
+    private char[] charCube;
 
-    Encoder(String text_, int[][] Cube_) {
+    public Encoder(String text, int[][] Cube_) {
         row = col = Cube_.length;
-        text = text_;
+        this.text = text;
         Cube = new int[row][col];
+        charCube = new char[row * col];
         for (int i = 0; i < row; ++i) {
             for (int j = 0; j < col; ++j) {
                 Cube[i][j] = Cube_[i][j];
@@ -17,27 +19,25 @@ class Encoder {
         }
     }
 
-    public void Encode_() {
-        for (int t = 0; t < row; ++t) {
-            for (int k = 0; k < col; ++k) {
-                System.out.print(text.charAt(Cube[t][k] - 1));
-
+    public void encode_() {
+        for (int i = 0, s = 0; i < row; ++i) {
+            for (int j = 0; j < col; ++j, ++s) {
+                charCube[s] = text.charAt(Cube[i][j] - 1);
             }
+        }
+    }
+
+    public void decode_() {
+        for (int i = 0, t = 0; i < row; ++i) {
+            for (int j = 0; j < col; ++j, ++t) {
+                charCube[Cube[i][j]-1] = text.charAt(t);
+            }
+        }
+        }
+    public void print() {
+        for (int i = 0; i < row * col; ++i) {
+            System.out.print(charCube[i]);
         }
         System.out.println();
     }
-
-    public void Decode_() {
-        char[] temp = new char[row * row];
-            for (int i = 0, t = 0; i < row; ++i) {
-                for (int j = 0; j < col; ++j, ++t) {
-                    temp[Cube[i][j]-1] = text.charAt(t);
-                }
-            }
-            for (char lul : temp) {
-                System.out.print(lul);
-            }
-            System.out.println();
-        }
-
-    }
+}

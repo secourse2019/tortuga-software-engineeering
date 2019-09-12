@@ -6,24 +6,19 @@ class Cipher {
     private char[] key;
     private char[][] box;
     String text;
-    Cipher(String text_, int row_, int col_) {
-        row = row_;
-        col = col_;
-        text = text_;
+   public Cipher(String text, int row, int col) {
+        this.row = row;
+        this.col = col;
+        this.text = text;
     }
 
-    public void Encode() {
+    public void encode() {
         box = new char[row][col];
         for (int t = 0, j = 0; t < col; ++t) {
             for (int k = 0; k < row; ++k, ++j) {
                 box[k][t] = text.charAt(j);
             }
         }
-        for (int t = 0, j = 0; t < row; ++t) {
-            for (int k = 0; k < col; ++k, ++j)
-                System.out.print(box[t][k]);
-        }
-        System.out.println();
     }
      public Cipher(String t, String k) {
         text = t;
@@ -31,12 +26,12 @@ class Cipher {
         col = (int)Math.ceil((double)text.length() / (double)key.length) + 1;
         row = key.length;
         box = new char[col][row];
-        FillBox();
-        SortKeyWord();
-        SortBox();
+        fillBox();
+        sortKeyWord();
+        sortBox();
     }
 
-    private void FillBox() {
+    private void fillBox() {
         for(int i = 0; i != row; ++i) {
             box[0][i] = key[i];
         }
@@ -53,7 +48,7 @@ class Cipher {
         }
     }
 
-    private void SortBox() {
+    private void sortBox() {
         for(int i = 0; i != row; ++i) {
             for(int j = 0; j != row; ++j) {
                 if(key[i] == box[0][j]) {
@@ -67,7 +62,7 @@ class Cipher {
         }
     }
 
-    private void SortKeyWord() {
+    private void sortKeyWord() {
         for(int i = 0; i != key.length; ++i) {
             for(int j = 0; j != key.length - i - 1; ++j) {
                 if(key[j] > key[j + 1]) {
@@ -79,12 +74,19 @@ class Cipher {
         }
     }
 
-    public String Encode_key() {
+    public String encode_Key() {
         String result = "";
         for(int i = 1; i != col; ++i) {
             result = result.concat(new String(box[i]));
         }
         return result;
+    }
+    public void print(){
+        for (int t = 0, j = 0; t < row; ++t) {
+            for (int k = 0; k < col; ++k, ++j)
+                System.out.print(box[t][k]);
+        }
+        System.out.println();
     }
 }
 
