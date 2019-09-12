@@ -3,11 +3,12 @@ public class Cube {
     private int col;
     private String text;
     private int[][] Cube;
-
+    private char[] charCube;
     Cube(String text, int[][] Matrix) {
         row = col = Matrix.length;
         this.text = text;
         Cube = new int[row][col];
+        charCube = new char[row*col];
         for (int i = 0; i < row; ++i) {
             for (int j = 0; j < col; ++j) {
                 Cube[i][j] = Matrix[i][j];
@@ -16,24 +17,23 @@ public class Cube {
     }
 
     public void encrypt() {
-        for (int i = 0; i < row; ++i) {
-            for (int j = 0; j < col; ++j) {
-                System.out.print(text.charAt(Cube[i][j] - 1));
-
+        for (int i = 0, s = 0; i < row; ++i) {
+            for (int j = 0; j < col; ++j, ++s) {
+                charCube[s] = text.charAt(Cube[i][j] - 1);
             }
         }
-        System.out.println();
     }
 
     public void decrypt() {
-        char[] temp = new char[row * row];
         for (int i = 0, t = 0; i < row; ++i) {
             for (int j = 0; j < col; ++j, ++t) {
-                temp[Cube[i][j]-1] = text.charAt(t);
+                charCube[Cube[i][j]-1] = text.charAt(t);
             }
         }
-        for (char lul : temp) {
-            System.out.print(lul);
+    }
+    public void print(){
+        for (int i = 0; i < row*col; ++i) {
+                System.out.print(charCube[i]);
         }
         System.out.println();
     }

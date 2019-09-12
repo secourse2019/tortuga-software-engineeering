@@ -20,6 +20,11 @@ public class Main {
         a3.decrypt();
         a4.decrypt();
         a5.decrypt();
+        a1.print();
+        a2.print();
+        a3.print();
+        a4.print();
+        a5.print();
         String text1_1 = "УСПЕХ – ЭТО КОГДА ТЫ ДЕВЯТЬ РАЗ УПАЛ, НО ДЕСЯТЬ РАЗ ПОДНЯЛСЯ";
         String text1_2 = "БМ_Д_АДЫНЭНУТРТЫТОМЬУЬМО,Н_Г____И–ОУ–ОАЧ_Е";
         String text1_3 = "МЫ ДОЛЖНЫ ПРИЗНАТЬ ОЧЕВИДНОЕ: ПОНИМАЮТ ЛИШЬ ТЕ, КТО ХОЧЕТ ПОНЯТЬ";
@@ -38,8 +43,9 @@ public class Main {
         Transposition b1 = new Transposition(text1_1, 6,10);
         Transposition b2 = new Transposition(text1_2, 6,7);
         b1.encrypt();
-        b2.decrypt();
         b1.printBox();
+        b2.decrypt();
+
         b2.printBox();
         TranspositionKeyEncrypt c1 = new TranspositionKeyEncrypt(text1_3,"МЫСЛЕННО");
         TranspositionKeyEncrypt c11 = new TranspositionKeyEncrypt(text1_11,"ОСЕНЬ");
