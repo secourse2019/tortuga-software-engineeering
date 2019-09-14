@@ -1,10 +1,10 @@
 package com.company;
 
 class Encoder {
-    public int row;
-    public int col;
-    public String text;
-    public int[][] Cube;
+    private  int row;
+    private int col;
+    private String text;
+    private int[][] Cube;
     private char[] charCube;
 
     public Encoder(String text, int[][] Cube_) {

@@ -1,11 +1,11 @@
 package com.company;
 
 class Cipher {
-    int row;
-    int col;
+    private int row;
+    private int col;
     private char[] key;
     private char[][] box;
-    String text;
+    private String text;
    public Cipher(String text, int row, int col) {
         this.row = row;
         this.col = col;
