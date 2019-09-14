@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e8ae1b9-6773-4d9f-9b58-5930b9090e3a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/META-INF/untitled104.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/company/Cipher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/com/company/Cipher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/company/Encoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/com/company/Encoder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/com/company/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/cipher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/cipher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/encoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/encoder.java" afterDir="false" />
     </list>
