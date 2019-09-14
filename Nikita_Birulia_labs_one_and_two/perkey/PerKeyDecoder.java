@@ -8,10 +8,6 @@ public class PerKeyDecoder {
     private String message;
     private char[] key;
 
-
-    public PerKeyDecoder() {
-    }
-
     public void setString(String message) {
         this.message = message;
     }

@@ -9,9 +9,6 @@ public class MagicBoxEncoder {
     private char[] secondBox;
     private char[][] box;
 
-    public MagicBoxEncoder() {
-    }
-
     public void setString(String message) {
         this.message = message;
     }

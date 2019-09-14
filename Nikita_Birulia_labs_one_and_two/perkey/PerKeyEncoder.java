@@ -9,9 +9,6 @@ public class PerKeyEncoder {
     private String message;
     private char[] key;
 
-    public PerKeyEncoder() {
-    }
-
     public void setString(String message) {
         this.message = message;
     }

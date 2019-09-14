@@ -7,9 +7,6 @@ import com.company.util.Util;
 public class Simple {
     private String message;
 
-    public Simple() {
-    }
-
     public void setMessage(String message) {
         this.message = message;
     }

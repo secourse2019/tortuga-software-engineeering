@@ -7,9 +7,6 @@ public class MagicBoxDecoder {
     private int[] key;
     private String message;
 
-    public MagicBoxDecoder() {
-    }
-
     public void setString(String message) {
         this.message = message;
     }
