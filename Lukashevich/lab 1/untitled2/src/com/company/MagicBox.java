@@ -5,14 +5,15 @@ public class MagicBox {
     public static String Shif (String text, int[][] box)
     {
         int matrixValue = (box.length * box[0].length);
-        if (text.length() < matrixValue)
-        {
+        if (text.length() < matrixValue) {
+
             for (int i = text.length(); i < matrixValue; i++)
             {
                 text += '.';
             }
-        }else if (text.length() > matrixValue)
-        {
+
+        }else if (text.length() > matrixValue) {
+
             int delta = text.length() - matrixValue;
             text = text.substring(0, text.length() - delta);
         }
@@ -34,8 +35,8 @@ public class MagicBox {
     public static String Deshif (String text, int[][] box)
     {
         int matrixValue = (box.length * box[0].length);
-        if (text.length() != matrixValue)
-        {
+        if (text.length() != matrixValue) {
+
             return "Error : key uncorect";
         }
 

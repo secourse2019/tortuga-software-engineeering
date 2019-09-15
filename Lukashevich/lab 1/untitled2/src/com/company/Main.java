@@ -9,14 +9,14 @@ public class Main {
         System.out.println(s1);
         System.out.println(key);
 
-        String a =  SqardShif.MadeShif (s1, key);
+        String SqardShifString =  SqardShif.MadeShif (s1, key);
 
-        System.out.println(a);
+        System.out.println(SqardShifString);
 
 
-        a = SqardDecoder.DecodSqardShit(a, key);
+        SqardShifString = SqardDecoder.DecodSqardShit(SqardShifString, key);
 
-        System.out.println(a);
+        System.out.println(SqardShifString);
 
 
         System.out.println();
