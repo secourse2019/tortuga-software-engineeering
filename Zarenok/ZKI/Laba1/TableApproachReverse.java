@@ -19,13 +19,8 @@ public class TableApproachReverse {
         int temp = 0;
         for(int i = 0; i != column; ++i){
             for(int j = 0; j != row; ++j){
-                //if(temp < text.length()){
                     arr[i][j] = text.charAt(temp);
                     ++temp;
-                //}
-               // else{
-                //    arr[i][j] = ' ';
-               // }
             }
         }
     }

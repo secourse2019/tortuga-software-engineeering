@@ -3,34 +3,30 @@ package com.company;
 public class MagicSquare {
     String text;
     int[] magicCode;
-    char[] result;
+    StringBuilder result;
     public MagicSquare(String text, int[] magicCode){
         this.text = text;
         this.magicCode = magicCode;
-        this.result = new char[text.length()];
+        this.result = new StringBuilder();
         inputResult();
         getResult();
     }
 
     public void inputResult(){
-        for(int j = 0; j != result.length; ++j){
-            for(int i = 1; i <= result.length; ++i){
+        for(int j = 0; j != result.length(); ++j){
+            for(int i = 1; i <= result.length(); ++i){
                 if(magicCode[j] == i){
-                    result[j] = text.charAt(i-1);
+                    result.append(text.charAt(i-1));
                 }
             }
         }
     }
 
     public String getResult(){
-        String res = "";
-        for(int i = 0; i != result.length; ++i){
-            res += result[i];
-        }
-        return res;
+        return result.toString();
     }
 
     public void printResult(){
-        System.out.println(result);
+        System.out.println(result.toString());
     }
 }

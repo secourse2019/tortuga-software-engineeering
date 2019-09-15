@@ -2,22 +2,22 @@ package com.company;
 
 public class KeyApproach {
     String text;
-    char[] key;
+    String key;
     char[] reverseWord;
     int column;
     int row;
     char[][] arr;
 
-    public KeyApproach(String text, String _key, int row, int column) {
+    public KeyApproach(String text, String key, int row, int column) {
         this.text = text;
-        key = _key.toCharArray();
+        this.key = key;
         this.column = column;
         this.row = row;
         this.arr = new char[row+2][column];
-        this.reverseWord = _key.toCharArray();
+        this.reverseWord = key.toCharArray();
     }
 
-    public void incoder() {
+    public void encoder() {
         for (int i = 0; i != column; ++i) {
             arr[0][i] = reverseWord[i];
         }
@@ -63,8 +63,8 @@ public class KeyApproach {
 
     public void decoder() {
         sortRevKeyWord();
-        for(int i = 0; i != key.length; ++i){
-            arr[0][i] = key[i]; // input keyword
+        for(int i = 0; i != key.length(); ++i){
+            arr[0][i] = key.charAt(i);// input keyword
         }
         for(int i = 0; i != column; ++i) {
             arr[1][i] = reverseWord[i]; // input sortkeyword

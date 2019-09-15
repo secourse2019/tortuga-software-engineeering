@@ -3,7 +3,7 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        /*TableApproach task1 = new TableApproach("УСПЕХ – ЭТО КОГДА ТЫ ДЕВЯТЬ РАЗ УПАЛ, НО ДЕСЯТЬ РАЗ ПОДНЯЛСЯ", 6, 10);
+       /*TableApproach task1 = new TableApproach("УСПЕХ – ЭТО КОГДА ТЫ ДЕВЯТЬ РАЗ УПАЛ, НО ДЕСЯТЬ РАЗ ПОДНЯЛСЯ", 6, 10);
         System.out.println("Task1: "+task1.getSecretMessage());
         TableApproachReverse task2 = new TableApproachReverse("БМ_Д_АДЫНЭНУТРТЫТОМЬУЬМО,Н_Г____Е–ОУ–ОАЧ_Е ", 6, 7);
         System.out.println("Task2:"+task2.getCorrectAnswer());
