@@ -15,7 +15,9 @@ package com.company;
 
 public class Task25{
     public static void main(String[] args) {
-
+        int n = Integer.valueOf(args[0]);
+        int x = Integer.valueOf(args[1]);
+        System.out.println(String.format("%d %d",n,x));
         Task_25 b = new Task_25();
         System.out.println(b.Task_25(3,6));
     }
