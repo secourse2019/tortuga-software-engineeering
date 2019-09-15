@@ -15,7 +15,7 @@ public class MagicQuadrateDecoder {
     }
 
     public void FillMagicBox(){
-        for(int i = 0; i != box.length; ++i){
+        for(int i = 0; i <= box.length; ++i){
             for(int j = 0; j != box.length; ++j){
                 if(MagicBox[j] == i){
                     box[i-1] = text[j];

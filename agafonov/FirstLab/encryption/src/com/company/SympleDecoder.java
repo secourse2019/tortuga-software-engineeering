@@ -13,7 +13,6 @@ public class SympleDecoder {
         box = new char[row][column];
 
         fillbox();
-        getArr();
         System.out.println(get());
     }
 

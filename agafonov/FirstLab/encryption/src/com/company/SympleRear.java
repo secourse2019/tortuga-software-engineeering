@@ -13,8 +13,6 @@ public class SympleRear {
         text = t.toCharArray();
 
         fillbox();
-        getArr();
-        System.out.println("\n");
         System.out.println(get());
     }
 
