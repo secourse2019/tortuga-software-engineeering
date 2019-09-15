@@ -1,6 +1,3 @@
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -26,12 +23,12 @@ public class Main {
                                 6, 7, args[1]));
 
         System.out.println(
-                EncryptionMetthodWithWord.
+                EncryptionMethodWithWord.
                         GetEncryptStringWithWord(
                                 8,8, args[2], args[3]));
 
         System.out.println(
-                EncryptionMetthodWithWord.
+                EncryptionMethodWithWord.
                         GetDecryptStringWithWord(
                                 11, 6, args[4], args[5]));
 
