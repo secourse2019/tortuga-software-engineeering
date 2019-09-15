@@ -4,6 +4,7 @@ public class Cube {
     private String text;
     private int[][] Cube;
     private char[] charCube;
+
     Cube(String text, int[][] Matrix) {
         row = col = Matrix.length;
         this.text = text;

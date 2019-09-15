@@ -1,8 +1,9 @@
 public class Transposition{
-    int row;
-    int col;
+    private int row;
+    private int col;
     private char[][] box;
-    String text;
+    private String text;
+
     Transposition(String text, int row, int col) {
         this.row = row;
         this.col = col;
