@@ -1,6 +1,10 @@
 package util;
 
+import transpositionwithkey.comparators.IComparator;
+import transpositionwithkey.data.types.Pair;
 import util.callables.IFIllArray;
+
+import java.util.ArrayList;
 
 public class Util {
     public static int promoteLength(int val) {
@@ -33,5 +37,9 @@ public class Util {
 
     public static String getResultFromMatrix(char[][] matrix, int column, int row, IGetMessage iGetMessage) {
         return iGetMessage.getMessage(matrix, column, row);
+    }
+
+    public static void sortDictKey(ArrayList<Pair> dictKey, IComparator comparator) {
+
     }
 }
