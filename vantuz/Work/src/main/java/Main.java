@@ -1,23 +1,16 @@
-import magic.square.propertycontainers.DecryptContentContainer;
-import magic.square.propertycontainers.EncryptContentContainer;
-import magic.square.methods.MagicSquareDecrypt;
-import magic.square.methods.MagicSquareEncrypt;
-import util.data.types.CharSetSquareMatrix;
+import transpositionwithkey.Encoder;
+import transpositionwithkey.propertycontainers.ContentContainer;
 
 public class Main {
     public static void main(String[] args) {
-        String text = "abcdefghij";
+        String text = "first message, rost lox";
+        String key = "icq1";
 
-        EncryptContentContainer cont = new EncryptContentContainer(text);
-        MagicSquareEncrypt squareEncrypt = new MagicSquareEncrypt();
+        ContentContainer container = new ContentContainer(text, key);
+        Encoder encoder = new Encoder(container);
 
-        squareEncrypt.setContent(cont);
+        encoder.encodeMessage();
 
-        CharSetSquareMatrix matr = squareEncrypt.getEncryptedMessage();
-
-        DecryptContentContainer decryptContent = new DecryptContentContainer(cont.getMapMagicSquare(), matr);
-        MagicSquareDecrypt decrypt = new MagicSquareDecrypt();
-        decrypt.setContent(decryptContent);
-        System.out.println(decrypt.getDecryptedMessage());
+        System.out.println(encoder.getEncodedMessage());
     }
 }

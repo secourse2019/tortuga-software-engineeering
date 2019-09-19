@@ -11,7 +11,7 @@ public class ContentContainer {
     public ArrayList<Pair> dictKey;
 
     public ContentContainer(String text, String key) {
-        this.message = new CharMatrix(text);
+        this.message = new CharMatrix(text, key.length());
         setDictKey(key);
     }
 
@@ -31,5 +31,13 @@ public class ContentContainer {
     }
     public int getRowsCount() {
         return message.getRowsCount();
+    }
+    public void swapColumnsInMessage(int fColumn, int sColumn) {
+        message.swapColumns(fColumn, sColumn);
+    }
+    public void swapPairsInDickKey(int fPair, int sPair) {
+        Pair firstPair = dictKey.get(fPair);
+        dictKey.set(fPair, dictKey.get(sPair));
+        dictKey.set(sPair, firstPair);
     }
 }

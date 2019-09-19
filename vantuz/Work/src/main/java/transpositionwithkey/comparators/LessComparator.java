@@ -1,7 +1,8 @@
 package transpositionwithkey.comparators;
 
 public class LessComparator implements IComparator {
-    public boolean compare(int f, int s) {
-        return f > s;
+    @Override
+    public int compare(int f, int s) {
+        return s - f;
     }
 }

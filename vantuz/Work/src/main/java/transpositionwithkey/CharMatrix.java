@@ -8,8 +8,8 @@ public class CharMatrix {
     private int columnsCount;
     private int rowsCount;
 
-    public CharMatrix(String text) {
-        this.columnsCount = text.length();
+    public CharMatrix(String text, int columnsCount) {
+        this.columnsCount = columnsCount;
         this.rowsCount = text.length() / this.columnsCount;
 
         if (text.length() - (this.rowsCount * this.columnsCount) != 0) {
@@ -18,12 +18,12 @@ public class CharMatrix {
 
         this.message = new char[this.rowsCount][this.columnsCount];
 
-        int newSymbolsCount = text.length() - (this.rowsCount * this.columnsCount);
-        for (int i = 0; i < newSymbolsCount; ++i) {
-            text += ' ';
+        int newSymbolsCount = (this.rowsCount * this.columnsCount) - text.length();
+        for (int charCode = 33; (charCode - 33) < newSymbolsCount; ++charCode) {
+            text += (char)charCode;
         }
 
-        Util.fillCharMatrix(text, this.message, this.rowsCount, this.columnsCount, new FillArrayByColumn());
+        Util.fillCharMatrix(text, this.message, this.columnsCount, this.rowsCount, new FillArrayByColumn());
     }
 
     public int getColumnsCount() {
@@ -34,18 +34,22 @@ public class CharMatrix {
         return this.rowsCount;
     }
 
-    private void swapSymbols(int firstColIndex, int secondColIndex, int rowIndex)
+    public void swapSymbols(int firstColIndex, int secondColIndex, int rowIndex)
     {
         char fSymbol = this.message[rowIndex][firstColIndex];
         this.message[rowIndex][firstColIndex] = this.message[rowIndex][secondColIndex];
         this.message[rowIndex][secondColIndex] = fSymbol;
     }
 
-    private void swapColumns(int firstColumnIndex, int secondColumnIndex)
+    public void swapColumns(int firstColumnIndex, int secondColumnIndex)
     {
         for (int rowIndex = 0; rowIndex < this.rowsCount; ++rowIndex)
         {
             swapSymbols(firstColumnIndex, secondColumnIndex, rowIndex);
         }
+    }
+
+    public char[][] getMessage() {
+        return message;
     }
 }
