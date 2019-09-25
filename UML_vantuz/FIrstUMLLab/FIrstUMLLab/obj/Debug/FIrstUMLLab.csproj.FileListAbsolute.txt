@@ -1,0 +1,7 @@
+C:\Users\vgrit\source\repos\FIrstUMLLab\FIrstUMLLab\bin\Debug\FIrstUMLLab.exe.config
+C:\Users\vgrit\source\repos\FIrstUMLLab\FIrstUMLLab\bin\Debug\FIrstUMLLab.exe
+C:\Users\vgrit\source\repos\FIrstUMLLab\FIrstUMLLab\bin\Debug\FIrstUMLLab.pdb
+C:\Users\vgrit\source\repos\FIrstUMLLab\FIrstUMLLab\obj\Debug\FIrstUMLLab.csprojAssemblyReference.cache
+C:\Users\vgrit\source\repos\FIrstUMLLab\FIrstUMLLab\obj\Debug\FIrstUMLLab.csproj.CoreCompileInputs.cache
+C:\Users\vgrit\source\repos\FIrstUMLLab\FIrstUMLLab\obj\Debug\FIrstUMLLab.exe
+C:\Users\vgrit\source\repos\FIrstUMLLab\FIrstUMLLab\obj\Debug\FIrstUMLLab.pdb
