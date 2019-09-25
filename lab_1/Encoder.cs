@@ -4,6 +4,14 @@ namespace Enc
 {
     public class Encoder
     {
+        private static void SwapChar(char[] charstr, int intdex)
+        {
+            char temp;
+            temp = charstr[intdex];
+            charstr[intdex] = charstr[intdex + 1];
+            charstr[intdex + 1] = temp;
+        }
+
         private static string ReturnEncryptedMessage(char[, ] matrix, int row, int column)
         {
             string encrypted_message = "";
@@ -16,6 +24,21 @@ namespace Enc
                 }
             }
             return encrypted_message;
+        }
+
+        private static void SwapSymbols(char[, ] matrix,int firstColIndex, int secondColIndex, int rowIndex)
+        {
+            char fSymbol = matrix[rowIndex, firstColIndex];
+            matrix[rowIndex, firstColIndex] = matrix[rowIndex, secondColIndex];
+            matrix[rowIndex, secondColIndex] = fSymbol;
+        }
+
+        private static void SwapColumns(char[, ] matrix, int rowsCount, int firstColumnIndex, int secondColumnIndex)
+        {
+            for(int rowIndex = 0; rowIndex < rowsCount; ++rowIndex)
+            { 
+                SwapSymbols(matrix, firstColumnIndex, secondColumnIndex, rowIndex);
+            }
         }
 
         private static char[, ] RetrunMatrixMessage(string message, int row, int column)
@@ -54,14 +77,15 @@ namespace Enc
 
             char[, ] matrix = RetrunMatrixMessage(message, row, column);
             
-            char[, ] temp = matrix;
+            char[ ] charstr = message.ToCharArray();
             for(int i = 0; i != column; i++)
             {
                 for(int j = 0; j != column; j++)
                 {      
-                    if(message[j] > message[j + 1])
+                    if(charstr[j] > charstr[j + 1])
                     {   
-                        
+                        SwapColumns(matrix, row, j, j + 1);
+                        SwapChar(charstr, j);
                     }
                 }
             }

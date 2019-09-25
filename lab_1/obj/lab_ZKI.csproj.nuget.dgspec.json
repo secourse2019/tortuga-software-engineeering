@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/root/sources/c#/lab_ZKI/lab_ZKI.csproj": {}
+    "/root/sources/c#/tortuga-software-engineeering/lab_1/lab_ZKI.csproj": {}
   },
   "projects": {
-    "/root/sources/c#/lab_ZKI/lab_ZKI.csproj": {
+    "/root/sources/c#/tortuga-software-engineeering/lab_1/lab_ZKI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/root/sources/c#/lab_ZKI/lab_ZKI.csproj",
+        "projectUniqueName": "/root/sources/c#/tortuga-software-engineeering/lab_1/lab_ZKI.csproj",
         "projectName": "lab_ZKI",
-        "projectPath": "/root/sources/c#/lab_ZKI/lab_ZKI.csproj",
+        "projectPath": "/root/sources/c#/tortuga-software-engineeering/lab_1/lab_ZKI.csproj",
         "packagesPath": "/root/.nuget/packages/",
-        "outputPath": "/root/sources/c#/lab_ZKI/obj/",
+        "outputPath": "/root/sources/c#/tortuga-software-engineeering/lab_1/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/share/dotnet/sdk/NuGetFallbackFolder"

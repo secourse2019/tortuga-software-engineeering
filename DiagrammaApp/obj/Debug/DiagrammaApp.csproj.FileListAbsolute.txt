@@ -1,0 +1,2 @@
+D:\dima\sources\c#\DiagrammaApp\DiagrammaApp\obj\Debug\DiagrammaApp.csprojAssemblyReference.cache
+D:\dima\sources\c#\DiagrammaApp\DiagrammaApp\obj\Debug\DiagrammaApp.csproj.CoreCompileInputs.cache
