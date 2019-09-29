@@ -5,6 +5,8 @@ import com.company.Person.Driver;
 import com.company.Person.Passanger;
 import com.company.Route;
 
+import java.util.ArrayList;
+
 public abstract class Transport implements Payments {
     private int number;
     private int stock = 100;
@@ -12,11 +14,11 @@ public abstract class Transport implements Payments {
     private int[] timeTable;
     private Route route;
     private Driver driver;
-    private Passanger[] passangers;
+    private ArrayList<Passanger> passangers;
 
     public Transport(){}
 
-    public Transport(int number, int amount, int[] timeTable, Route route, Driver driver, Passanger[] passangers){
+    public Transport(int number, int amount, int[] timeTable, Route route, Driver driver, ArrayList<Passanger> passangers){
         this.setNumber(number);
         this.setAmount(amount);
         this.setTimeTable(timeTable);
@@ -78,11 +80,11 @@ public abstract class Transport implements Payments {
         this.driver = driver;
     }
 
-    public Passanger[] getPassangers() {
+    public ArrayList<Passanger> getPassangers() {
         return passangers;
     }
 
-    public void setPassangers(Passanger[] passangers) {
+    public void setPassangers(ArrayList<Passanger> passangers) {
         this.passangers = passangers;
     }
 }

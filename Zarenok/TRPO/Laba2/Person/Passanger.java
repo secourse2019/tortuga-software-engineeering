@@ -10,8 +10,8 @@ public class Passanger extends Person {
 
     Passanger(){}
 
-    Passanger(String name, String surname, int age, Transport transport, String unit){
-        super(name, surname, age);
+    Passanger(String name, String surname, int age, Transport transport, int crazyLevel, String unit){
+        super(name, surname, age, crazyLevel);
         this.setTransport(transport);
         this.setUnit(unit);
     }

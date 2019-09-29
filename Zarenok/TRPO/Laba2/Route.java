@@ -1,18 +1,20 @@
 package com.company;
 
+import java.util.ArrayList;
+
 public class Route {
-    private Station[] stations;
+    private ArrayList<Station> stations;
 
     public Route(){}
-    public Route(Station[] stations){
+    public Route(ArrayList<Station> stations){
         this.setStations(stations);
     }
 
-    public Station[] getStations() {
+    public ArrayList<Station> getStations() {
         return stations;
     }
 
-    public void setStations(Station[] stations) {
+    public void setStations(ArrayList<Station> stations) {
         this.stations = stations;
     }
 
@@ -22,8 +24,8 @@ public class Route {
 
     public double stage(){
         double result = 0;
-        for(int i = 0; i != this.stations.length; ++i){
-            result += getDistanceBetweenTwoStation(this.stations[i+1], this.stations[i]);
+        for(int i = 0; i != this.stations.size(); ++i){
+            result += getDistanceBetweenTwoStation(this.stations.get(i+1), this.stations.get(i));
         }
         return result;
     }
