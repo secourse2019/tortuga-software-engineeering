@@ -14,6 +14,10 @@ public class Route {
         return stations;
     }
 
+    public Station getStation(int index) {
+      return this.stations.get(index);
+    };
+
     public void setStations(ArrayList<Station> stations) {
         this.stations = stations;
     }

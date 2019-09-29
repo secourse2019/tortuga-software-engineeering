@@ -11,6 +11,7 @@ public class Tram extends GroundTransport {
     public Tram(){}
     public Tram(int number, int amount, int[] timeTable, Route route, Driver driver, ArrayList<Passanger> passangers, Blogger blogger){
         super(number, amount, timeTable, route, driver, passangers, blogger);
+        this.setName("Tram");
     }
 
     @Override
