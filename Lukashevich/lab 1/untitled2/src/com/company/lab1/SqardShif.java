@@ -1,9 +1,44 @@
-package com.company;
+package com.company.lab1;
 
-public class SqardShif {
+import com.company.Shifrator;
+
+public class SqardShif implements Shifrator<String> {
+
+    String text;
+    String key;
+    private String result;
+
+    public SqardShif (String text, String key)
+    {
+        SetKey(key);
+        SetText(text);
+        SetResult(MadeShif());
+    }
+
+    @Override
+    public void SetResult (String res)
+    {
+        this.result = res;
+    }
+
+    @Override
+    public String GetResult ()
+    {
+        return this.result;
+    }
+
+    @Override
+    public void SetKey(String key) {
+        this.key = key;
+    }
+
+    @Override
+    public void SetText(String text) {
+        this.text = text;
+    }
 
 
-    public static char[][] GetMatrix(String s1, String key) {
+    private static char[][] GetMatrix(String s1, String key) {
         int s_size = s1.length();
         int key_size = key.length();
         int matrixRow = (s_size / key_size) + 2;
@@ -36,7 +71,7 @@ public class SqardShif {
     }
 
 
-    public static int[] SortKey(char arr1[]) {
+    private static int[] SortKey(char arr1[]) {
 
         char[] arr = new char[arr1.length];
 
@@ -70,7 +105,7 @@ public class SqardShif {
     }
 
 
-    public static char[][] SortByKey(char[][] arr) {
+    private static char[][] SortByKey(char[][] arr) {
         int[] sortKey = SortKey(arr[0]);
         System.out.println();
         char[][] res = new char[arr.length][(arr[0]).length];
@@ -86,9 +121,10 @@ public class SqardShif {
         return res;
     }
 
-    public static String MadeShif(String s1, String key) {
+    @Override
+    public  String MadeShif() {
 
-        char[][] res = GetMatrix(s1, key);
+        char[][] res = GetMatrix(text, key);
 
         char[][] res2 = SortByKey(res);
 
