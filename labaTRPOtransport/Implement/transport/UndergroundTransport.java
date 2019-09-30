@@ -6,11 +6,13 @@ import com.company.Person.Passanger;
 import com.company.Person.Security;
 import com.company.Route;
 
+import java.util.ArrayList;
+
 public abstract class UndergroundTransport extends Transport {
     private Security security;
 
     public UndergroundTransport(){}
-    public UndergroundTransport(int number, int amount, int[] timeTable, Route route, Driver driver, Passanger[] passangers, Security security){
+    public UndergroundTransport(int number, int amount, int[] timeTable, Route route, Driver driver, ArrayList<Passanger> passangers, Security security){
         super(number, amount, timeTable, route, driver, passangers);
         this.setSecurity(security);
     }
