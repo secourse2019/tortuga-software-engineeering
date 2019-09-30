@@ -1,4 +1,4 @@
-package com.company.dpo.transport;
+package com.company.Transport.dpo.transport;
 
 public enum TransportType {
 

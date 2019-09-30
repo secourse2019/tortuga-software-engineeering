@@ -1,4 +1,4 @@
-package com.company.dpo.departmant;
+package com.company.Transport.dpo.departmant;
 
 public class OfficeDepartment implements Department {
     private int profitability;
