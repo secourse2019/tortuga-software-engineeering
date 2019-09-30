@@ -1,9 +1,9 @@
 package com.company;
 
-public class Tram
+public class Tram extends RailTransport
 {
-    public Tram ()
+    public Tram (Route r, Driver d, int n, Сontroller con)
     {
-        System.out.println("Tram () ");
+        super(r, d, n, con);
     }
 }

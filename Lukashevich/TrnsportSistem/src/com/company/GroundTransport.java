@@ -1,11 +1,13 @@
 package com.company;
 
+
 public class GroundTransport extends Transport
 {
     public Сontroller controller;
 
-    public GroundTransport ()
+    public GroundTransport (Route r, Driver d, int n, Сontroller con)
     {
-        System.out.println("GroundTransport ()");
+        super(r, d, n);
+        this.controller = con;
     }
 }

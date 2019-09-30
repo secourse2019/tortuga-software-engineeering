@@ -7,19 +7,19 @@ public class Station
     private String name;
     private Point position;
 
-    public Station ()
+    public Station (String name, Point position)
     {
-        System.out.println("Station ()");
+       this.name = name;
+       this.position = position;
     }
 
     public void SetName (String name)
     {
-        System.out.println("SetName (String name)");
+        this.name = name;
     }
 
     private String GetName ()
     {
-        System.out.println("GetName ()");
         return this.name;
     }
 

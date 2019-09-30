@@ -1,23 +1,55 @@
 package com.company;
 
+import java.security.PublicKey;
+import java.util.ArrayList;
+
 public class TransportSistem {
 
-    private Transport[] transports;
-    private Department[] departments;
+    private ArrayList<Transport> transports = null;
+    private ArrayList<Department> departments;
     private double budget;
 
-    public TransportSistem()
+    public TransportSistem( Double startBudget)
     {
-        System.out.println("TransportSistem()");
+        this.budget = startBudget;
     }
 
     public void PaySalary()
     {
-        System.out.println("paySalary()");
+        double cost = 0;
+        for (int i = 0; i < departments.size(); i++) {
+            for (int j = 0; j < departments.get(i).employees.size(); j++) {
+
+                cost += departments.get(i).employees.get(j).position.GetSalary();
+            }
+        }
+
+        this.budget -= cost;
     }
 
-    public void RepairTransport(Transport trnsport)
+    public void AddTraanport (Transport t)
     {
-        System.out.println("RepairTransport()");
+        this.transports.add(t);
+    }
+
+    public void AddDepartment (Department d)
+    {
+        this.departments.add(d);
+    }
+
+    private int FindIndexByID (int id)
+    {
+        for (int i = 0; i < this.transports.size(); i++) {
+            if (transports.get(i).id == id)
+            {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public void RepairTransport(int id)
+    {
+        this.transports.remove(FindIndexByID(id));
     }
 }

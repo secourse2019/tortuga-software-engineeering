@@ -4,20 +4,16 @@ public class Position
 {
     private double salary;
 
-    public Position ()
-    {
-        System.out.println("Position ()");
-    }
+    public Position () { }
 
     public void SetSalary (double salary)
     {
-        System.out.println("SetSalary ()");
+       this.salary = salary;
     }
 
     public double GetSalary ()
     {
-        System.out.println("GetSalary ()");
-        return 0;
+        return this.salary;
     }
 
 }

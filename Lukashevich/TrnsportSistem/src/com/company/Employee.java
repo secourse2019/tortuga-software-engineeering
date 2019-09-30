@@ -2,32 +2,41 @@ package com.company;
 
 public class Employee
 {
+    private static int countID = 0;
+    private int id;
     private String name;
     private String surname;
-    private Position position;
+    public Position position;
 
     public Employee()
     {
-        System.out.println("Employee()");
+        countID++;
+        this.id = countID;
+    }
+
+    public int GetID ()
+    {
+        return this.id;
     }
 
     public void SetName (String name)
     {
-        System.out.println("SetName()");
+       this.name = name;
     }
 
-    public void GetName ()
+    public String GetName ()
     {
-        System.out.println("GetName()");
+        return this.name;
     }
 
     public void SetSurame (String name)
     {
-        System.out.println("SetSurame()");
+        this.surname = name;
     }
 
-    public void GetSurame ()
+    public String GetSurame ()
     {
-        System.out.println("GetSurame()");
+        return this.surname;
     }
+
 }

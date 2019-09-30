@@ -1,11 +1,46 @@
-package com.company;
+package com.company.lab1;
 
+import com.company.Deshif;
 import sun.tools.jconsole.JConsole;
 
-public class SqardDecoder {
+public class SqardDecoder implements Deshif<String> {
 
-    public static String DecodSqardShit (String text, String key) {
+    String text;
+    String key;
+    private String result;
 
+    public SqardDecoder (String text, String key)
+    {
+        SetKey(key);
+        SetText(text);
+        SetResult(MakeDeshif ());
+    }
+
+    @Override
+    public void SetResult (String res)
+    {
+        this.result = res;
+    }
+
+    @Override
+    public String GetResult ()
+    {
+        return this.result;
+    }
+
+    @Override
+    public void SetKey(String key) {
+        this.key = key;
+    }
+
+    @Override
+    public void SetText(String text) {
+        this.text = text;
+    }
+
+    @Override
+    public  String MakeDeshif ()
+    {
         char[] keyArr = key.toCharArray();
         int s_size = text.length();
         int key_size = key.length();
@@ -50,7 +85,6 @@ public class SqardDecoder {
         return result;
 
     }
-
 
 
 

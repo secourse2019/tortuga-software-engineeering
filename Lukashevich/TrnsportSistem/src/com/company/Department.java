@@ -1,9 +1,11 @@
 package com.company;
 
+import java.util.ArrayList;
+
 public class Department
 {
 
-    private Employee[] employees;
+    public ArrayList <Employee> employees;
     private String address;
     public Dispatcher dispatcher;
 
@@ -12,24 +14,36 @@ public class Department
         System.out.println("Department ()");
     }
 
-    public void DismissEmployee(int id)
+    private int FindEmpoerByID (int id)
     {
-        System.out.println("DismissEmployee ()" + id);
+        for (int i = 0; i < this.employees.size() ; i++)
+        {
+           if (this.employees.get(i).GetID() == id)
+           {
+               return i;
+           }
+        }
+        return -1;
     }
 
-    public void AcceptEmployee()
+    public void DismissEmployee(int id)
     {
-        System.out.println("AcceptEmployee ()");
+        this.employees.remove(FindEmpoerByID(id));
+    }
+
+    public void AcceptEmployee(Employee employee)
+    {
+        this.employees.add(employee);
     }
 
     public void SetAddress( String address)
     {
-        System.out.println("SetAddress ()");
+       this.address = address;
     }
 
-    public void  GetAddress( String address)
+    public String  GetAddress()
     {
-        System.out.println("GetAddress ()");
+        return this.address;
     }
 
 }

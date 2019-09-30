@@ -1,9 +1,9 @@
 package com.company;
 
-public class Trolley
+public class Trolley extends ElectricTransport
 {
-    public Trolley ()
+    public Trolley ( Route r, Driver d, int n, Сontroller con)
     {
-        System.out.println("Trolley ()");
+        super(r, d, n, con);
     }
 }

@@ -2,8 +2,8 @@ package com.company;
 
 public class ElectricTransport extends RoadTransport
 {
-   public ElectricTransport ()
+   public ElectricTransport (Route r, Driver d, int n, Сontroller con)
    {
-       System.out.println("ElectricTransport ()");
+      super(r, d, n, con);
    }
 }

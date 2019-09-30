@@ -5,7 +5,7 @@ public class Driver extends Position
 
     public Driver()
     {
-        System.out.println("Driver()");
+       super();
     }
 
     public void drive ()

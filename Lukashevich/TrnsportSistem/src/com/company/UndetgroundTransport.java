@@ -4,8 +4,9 @@ public class UndetgroundTransport extends Transport
 {
     public Security security;
 
-    public UndetgroundTransport()
+    public UndetgroundTransport(Route r, Driver d, int n, Security security)
     {
-        System.out.println("UndetgroundTransport()");
+        super(r, d, n);
+        this.security = security;
     }
 }

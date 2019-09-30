@@ -2,8 +2,8 @@ package com.company;
 
 public class Bus extends FuelTransport
 {
-    public Bus ()
+    public Bus (int fuel, Route r, Driver d, int n, Сontroller con)
     {
-        System.out.println("Bus ()");
+        super(fuel, r, d, n, con);
     }
 }

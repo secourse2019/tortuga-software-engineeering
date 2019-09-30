@@ -4,8 +4,8 @@ public class Route
 {
     public Station[] stations;
 
-    public  Route()
+    public  Route(Station[] stations)
     {
-        System.out.println("Route()");
+        this.stations = stations;
     }
 }

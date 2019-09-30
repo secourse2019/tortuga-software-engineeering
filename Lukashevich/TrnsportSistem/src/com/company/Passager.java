@@ -11,8 +11,13 @@ public class Passager
         System.out.println("Passager (String name, String surname)");
     }
 
-    public void Pay (Transport id)
+    public void Pay (int transportId)
     {
-        System.out.println("Pay (Transport id)");
+        this.card.lastPayTransportId = transportId;
+    }
+
+    public Card GetCard ()
+    {
+        return this.card;
     }
 }

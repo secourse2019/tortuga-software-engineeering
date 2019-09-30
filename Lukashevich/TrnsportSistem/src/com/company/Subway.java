@@ -1,9 +1,9 @@
 package com.company;
 
-public class Subway
+public class Subway extends UndetgroundTransport
 {
-    public Subway ()
+    public Subway (Route r, Driver d, int n, Security security)
     {
-        System.out.println("Subway ()");
+       super(r, d, n, security);
     }
 }

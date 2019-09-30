@@ -3,10 +3,7 @@ package com.company;
 public class Dispatcher extends Position
 {
 
-    public Dispatcher ()
-    {
-        System.out.println("Dispatcher ()");
-    }
+    public Dispatcher () { super(); }
 
     public void GiveAdvice(Driver driver)
     {

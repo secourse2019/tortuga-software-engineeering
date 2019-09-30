@@ -3,14 +3,17 @@ package com.company;
 public class FuelTransport extends RoadTransport
 {
     public int fuilValue;
+    public int maxFuel;
 
-    public FuelTransport ()
+    public FuelTransport (int fuel, Route r, Driver d, int n, Сontroller con)
     {
-        System.out.println("FuelTransport ()");
+        super(r, d, n, con);
+        this.fuilValue = fuel;
+        this.maxFuel = fuel;
     }
 
-    public void GetFuel (int value)
+    public void GetFuel ()
     {
-        System.out.println("GetFuel (int value)");
+        this.fuilValue = this.maxFuel;
     }
 }
