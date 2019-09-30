@@ -1,4 +1,4 @@
-package com.company.util;
+package com.company.Transport.util;
 
 public class Pair<First, Second> {
 

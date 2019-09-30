@@ -1,6 +1,7 @@
-package com.company.dpo.geolocation;
+package com.company.Transport.dpo.geolocation;
 
-import com.company.util.Pair;
+
+import com.company.Transport.util.Pair;
 
 public class Geolocation {
 
