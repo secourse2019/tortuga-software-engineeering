@@ -5,6 +5,7 @@ import com.company.Transport.dpo.mans.Passenger;
 import java.util.ArrayList;
 
 public class Station {
+
     public ArrayList<Passenger> awaiting;
     private String name;
     private String timetable;
