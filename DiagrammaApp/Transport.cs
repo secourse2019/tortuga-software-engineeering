@@ -9,7 +9,7 @@ namespace DiagrammaApp
     class Transport
     {
         public int number;
-        public Array timetable;
+        public List<> timetable;
         public int amount;
         public int stock;
         public Route route;
