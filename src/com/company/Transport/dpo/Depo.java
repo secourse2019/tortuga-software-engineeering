@@ -2,29 +2,23 @@ package com.company.Transport.dpo;
 
 import com.company.Transport.dpo.departmant.Garage;
 import com.company.Transport.dpo.departmant.OfficeDepartment;
+import com.company.Transport.dpo.geolocation.Geolocation;
 import com.company.Transport.dpo.mans.Employer;
 
-import java.util.ArrayList;
+import java.util.AbstractList;
 
 public class Depo {
-    private ArrayList<Employer> employerList;
+    public AbstractList<Employer> employerList;
     private String stationName;
     private OfficeDepartment officeDepartment;
     private Garage garage;
+    private Geolocation geolocation;
 
-    Depo(ArrayList<Employer> employerList, String stationName, OfficeDepartment officeDepartment, Garage garage) {
-        this.setEmployerList(employerList);
+    Depo(String stationName, OfficeDepartment officeDepartment, Garage garage, Geolocation geolocation) {
         this.setStationName(stationName);
         this.setOfficeDepartment(officeDepartment);
         this.setGarage(garage);
-    }
-
-    public ArrayList<Employer> getEmployerList() {
-        return employerList;
-    }
-
-    public void setEmployerList(ArrayList<Employer> employerList) {
-        this.employerList = employerList;
+        this.setGeolocation(geolocation);
     }
 
     public String getStationName() {
@@ -50,4 +44,10 @@ public class Depo {
     public void setGarage(Garage garage) {
         this.garage = garage;
     }
+
+    public Geolocation getGeolocation() {
+        return geolocation;
+    }
+
+    public void setGeolocation(Geolocation geolocation) { this.geolocation = this.geolocation; }
 }

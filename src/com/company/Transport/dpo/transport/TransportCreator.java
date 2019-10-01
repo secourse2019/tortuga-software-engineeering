@@ -3,41 +3,40 @@ package com.company.Transport.dpo.transport;
 import com.company.Transport.PaymentSystem;
 import com.company.Transport.dpo.Station;
 import com.company.Transport.dpo.mans.Passenger;
-import com.company.Transport.util.Pair;
 import com.company.Transport.util.Util;
-
-import java.util.ArrayList;
+import java.util.AbstractList;
+import java.util.Map;
 
 public class TransportCreator implements Transport {
 
     private int damage;
     private Platform movementMethod;
     private String number;
-    public ArrayList<Passenger> passengers;
-    private Pair<Fuel, Integer> type;
+    private AbstractList<Passenger> passengers;
+    private Map<Integer, Fuel> type;
     private PaymentSystem pay;
 
-    TransportCreator(Platform movementMethod, String number, String fuel, TransportType type, PaymentSystem pay) {
+    TransportCreator(Platform movementMethod, String number, Fuel fuel, TransportType type, PaymentSystem pay) {
         this.movementMethod = movementMethod;
         this.number = number;
-        this.type.first.type = fuel;
+        this.type.put(0, fuel);
         this.pay = pay;
     }
 
     @Override
-    public void WillSpendOnTheRoad(int distance, boolean nec) {
-        if(Necessity(nec) && type.second < distance / 10) {
-            Refueling();
+    public void willSpendOnTheRoad(int distance, boolean nec) {
+        if(necessity(nec) && type.get(0).volume < distance / 10) {
+            refueling();
         }
     }
 
     @Override
-    public void Refueling() {
-        type.second = 55;
+    public void refueling() {
+        type.get(0).volume = 55;
     }
 
     @Override
-    public boolean Necessity(boolean nec) {
+    public boolean necessity(boolean nec) {
         return nec;
     }
 
@@ -61,11 +60,9 @@ public class TransportCreator implements Transport {
     @Override
     public void setPay(PaymentSystem pay) { this.pay = pay; }
 
-    public void GoOutOf(Station station, int index) {
-        Util.Move(passengers, station.awaiting, index);
-    }
+    public void goOutOf(Station station, int index) { Util.move(passengers, station.awaiting, index); }
 
     public void Fill(Station station, int index) {
-        Util.Move(station.awaiting, passengers, index);
+        Util.move(station.awaiting, passengers, index);
     }
 }

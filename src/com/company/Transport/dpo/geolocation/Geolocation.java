@@ -1,14 +1,12 @@
 package com.company.Transport.dpo.geolocation;
 
-
-import com.company.Transport.util.Pair;
+import java.util.Map;
 
 public class Geolocation {
 
-    private Pair<Coordinates, Adress> geolocation;
+    private Map<Coordinates, Address> geolocation;
 
-    Geolocation(Coordinates coordinates, Adress adress) {
-        this.geolocation.first = coordinates;
-        this.geolocation.second = adress;
+    Geolocation(Coordinates coordinates, Address adress) {
+        this.geolocation.put(coordinates, adress);
     }
 }
