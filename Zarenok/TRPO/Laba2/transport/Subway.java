@@ -9,8 +9,8 @@ import java.util.ArrayList;
 
 public class Subway extends UndergroundTransport {
     public Subway(){}
-    public Subway(int number, int amount, int[] timeTable, Route route, Driver driver, ArrayList<Passanger> passangers, Security security){
-        super(number, amount, timeTable, route, driver, passangers, security);
+    public Subway(int number, int amount, Route route, Driver driver, ArrayList<Passanger> passangers, Security security) {
+        super(number, amount, route, driver, passangers, security);
         this.setName("Subway");
     }
 

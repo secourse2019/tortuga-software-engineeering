@@ -5,8 +5,8 @@ public class Worker extends Person {
 
     public Worker(){}
 
-    public Worker(String name, String surname, int age, int salary){
-        super(name, surname, age);
+    public Worker(String name, String surname, int age, int crazyLevel, int salary) {
+        super(name, surname, age, crazyLevel);
         this.salary = salary;
     }
 

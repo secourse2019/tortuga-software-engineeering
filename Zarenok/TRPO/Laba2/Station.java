@@ -11,7 +11,7 @@ public class Station {
 
     public Station(){}
 
-    public Station(String name, Point coordinates, ArrayList<Passanger> passangers){
+    public Station(String name, Point coordinates, ArrayList<Passanger> passangers) {
         this.setName(name);
         this.setCoordinates(coordinates);
         this.setPassangers(passangers);

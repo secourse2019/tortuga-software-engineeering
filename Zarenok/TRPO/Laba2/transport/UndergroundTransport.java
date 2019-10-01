@@ -12,8 +12,8 @@ public abstract class UndergroundTransport extends Transport {
     private Security security;
 
     public UndergroundTransport(){}
-    public UndergroundTransport(int number, int amount, int[] timeTable, Route route, Driver driver, ArrayList<Passanger> passangers, Security security){
-        super(number, amount, timeTable, route, driver, passangers);
+    public UndergroundTransport(int number, int amount, Route route, Driver driver, ArrayList<Passanger> passangers, Security security){
+        super(number, amount, route, driver, passangers);
         this.setSecurity(security);
     }
 

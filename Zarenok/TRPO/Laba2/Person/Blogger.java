@@ -2,21 +2,23 @@ package com.company.Person;
 
 import com.company.transport.Transport;
 
-public class Blogger extends Worker {
-    public Blogger(){}
+import java.util.ArrayList;
 
-    public Blogger(String name, String surname, int age, int salary) {
-        super(name, surname, age, salary);
+public class Blogger extends Worker {
+    public Blogger() {}
+
+    public Blogger(String name, String surname, int age, int crazyLevel,int salary) {
+        super(name, surname, age, crazyLevel, salary);
     }
 
-    private void slapInTheAss(){
+    private void slapInTheAss() {
         System.out.println("Pay a tax");
     }
 
-    public void checkPayment(Transport transport){
-        Passanger[] passangers = transport.getPassangers();
-        for(int i = 0; i != passangers.length; ++i){
-            if(!passangers[i].getIsPayed()){
+    public void checkPayment(Transport transport) {
+        ArrayList<Passanger> passangers = transport.getPassangers();
+        for(int i = 0; i != passangers.size(); ++i){
+            if(!passangers.get(i).getIsPayed()){
                 slapInTheAss();
             }
             System.out.println("Thank u");

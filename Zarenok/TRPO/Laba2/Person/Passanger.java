@@ -13,8 +13,8 @@ public class Passanger extends Person {
 
     Passanger(){}
 
-    Passanger(String name, String surname, int age, Transport transport, String unit, boolean inTransport, Station outStation){
-        super(name, surname, age);
+    Passanger(String name, String surname, int age, int crazyLevel, Transport transport, String unit, boolean inTransport, Station outStation){
+        super(name, surname, age, crazyLevel);
         this.setTransport(transport);
         this.setUnit(unit);
         this.setInTransport(inTransport);
@@ -34,11 +34,15 @@ public class Passanger extends Person {
         return isPayed;
     }
 
-    public void Payed(){
+    public void Payed() {
         if(this.transport.check(this.unit)){
             this.isPayed = true;
         }
         System.out.println("Payed, suka");
+    }
+
+    public Boolean isNeedOut(String name) {
+        return this.getOutStation().equals(name);
     }
 
     public String getUnit() {

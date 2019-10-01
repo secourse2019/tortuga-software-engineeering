@@ -4,14 +4,15 @@ public class Person {
     private String name;
     private String surname;
     private int age;
-   // private int crazyLevel;
+    private int crazyLevel;
 
     public Person(){}
 
-    public Person(String name, String surname, int age /*int crazyLevel*/){
-        this.name = name;
-        this.surname = surname;
-        this.age = age;
+    public Person(String name, String surname, int age, int crazyLevel) {
+        this.setName(name);
+        this.setSurname(surname);
+        this.setAge(age);
+        this.setCrazyLevel(crazyLevel);
     }
 
     public String getName() {
@@ -38,7 +39,7 @@ public class Person {
         this.age = age;
     }
 
-    /*public int getCrazyLevel() {
+    public int getCrazyLevel() {
         return crazyLevel;
     }
 
@@ -50,6 +51,6 @@ public class Person {
             crazyLevel = 0;
         }
         this.crazyLevel = crazyLevel;
-    }*/
+    }
 }
 

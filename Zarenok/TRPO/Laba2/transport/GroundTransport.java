@@ -11,8 +11,9 @@ public abstract class GroundTransport extends Transport {
     Blogger blogger;
 
     public GroundTransport(){}
-    public GroundTransport(int number, int amount, int[] timeTable, Route route, Driver driver, ArrayList<Passanger> passangers, Blogger blogger){
-        super(number, amount, timeTable, route, driver, passangers);
+    public GroundTransport(int number, int amount, Route route, Driver driver, ArrayList<Passanger> passangers, Blogger blogger) {
+        super(number, amount, route, driver, passangers);
+        this.setName("GroundTransport");
         this.blogger = blogger;
     }
 

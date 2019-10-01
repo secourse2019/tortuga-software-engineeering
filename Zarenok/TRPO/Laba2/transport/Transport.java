@@ -21,8 +21,7 @@ public abstract class Transport implements Payments {
 
     public Transport(){}
 
-    public Transport(String name, int number, int amount, Route route, Driver driver, ArrayList<Passanger> passangers){
-        this.setName(name);
+    public Transport(int number, int amount, Route route, Driver driver, ArrayList<Passanger> passangers){
         this.setNumber(number);
         this.setAmount(amount);
         this.setRoute(route);
@@ -31,16 +30,16 @@ public abstract class Transport implements Payments {
     }
 
 
-   /* public void stop(Station stop) { // TEST FUNCTION FOR ADDING AND DELETING PESSANGERS IN SPACE
-        ArrayList<Passanger> PassInTr = this.getPassangers();
+    public void stop(Station stop) { // TEST FUNCTION FOR ADDING AND DELETING PESSANGERS IN SPACE
         ArrayList<Passanger> PassOnSt = stop.getPassangers();
         HashMap<String, Integer> needTr = new HashMap<String, Integer>();
-        for (int i = 0; i < PassOnSt.size(); i++) {
-            if(PassInTr.get(i).getOutStation().equals(stop.getName())) {
-                PassOnSt.add(PassInTr.get(i));
-                PassInTr.remove(i);
+        for (int i = 0; i < this.getPassangers().size(); i++) {
+            if(this.getPassangers().get(i).isNeedOut(stop.getName())) {
+                PassOnSt.add(this.getPassangers().get(i));
+                this.getPassangers().remove(i);
             }
-            needTr.put(PassOnSt.get(i).getTransport().getName(), PassOnSt.get(i).getTransport().getNumber());
+        }
+        /*needTr.put(PassOnSt.get(i).getTransport().getName(), PassOnSt.get(i).getTransport().getNumber());
             for(HashMap.Entry<String, Integer> item : needTr.entrySet()) {
                 if(item.getKey() == this.getName() && item.getValue() == this.getNumber()){
                     PassOnSt.get(i).setInTransport(true);
@@ -49,9 +48,8 @@ public abstract class Transport implements Payments {
                 else {
                     PassOnSt.get(i).setInTransport(false);
                 }
-            }
-        }
-    }*/
+            }*/
+    }
 
     @Override
     public abstract boolean check(String unit);
