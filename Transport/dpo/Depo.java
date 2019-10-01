@@ -8,26 +8,17 @@ import com.company.Transport.dpo.mans.Employer;
 import java.util.AbstractList;
 
 public class Depo {
-    private AbstractList<Employer> employerList;
+    public AbstractList<Employer> employerList;
     private String stationName;
     private OfficeDepartment officeDepartment;
     private Garage garage;
     private Geolocation geolocation;
 
-    Depo(AbstractList<Employer> employerList, String stationName, OfficeDepartment officeDepartment, Garage garage, Geolocation geolocation) {
-        this.setEmployerList(employerList);
+    Depo(String stationName, OfficeDepartment officeDepartment, Garage garage, Geolocation geolocation) {
         this.setStationName(stationName);
         this.setOfficeDepartment(officeDepartment);
         this.setGarage(garage);
         this.setGeolocation(geolocation);
-    }
-
-    public AbstractList<Employer> getEmployerList() {
-        return employerList;
-    }
-
-    public void setEmployerList(AbstractList<Employer> employerList) {
-        this.employerList = employerList;
     }
 
     public String getStationName() {
