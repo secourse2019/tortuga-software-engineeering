@@ -1,13 +1,13 @@
 package com.company.route;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Branches {
-    private ArrayList<Station> stations = new ArrayList<Station>();
-    public void fillSubwayLine(Station station) {
-        this.stations.add(station);
+    private HashMap<Station,Coordinates> stations = new HashMap<Station,Coordinates>();
+    public void fillSubwayLine(Station station, Coordinates coordinates) {
+        this.stations.put(station, coordinates);
     }
-    public Station get(int id) {
+    public HashMap<Station,Coordinates> get(int id) {
         return stations.get(id);
     }
 }

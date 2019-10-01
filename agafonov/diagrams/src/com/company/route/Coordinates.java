@@ -1,8 +1,8 @@
 package com.company.route;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 
-public class Coordinates {
+public class Coordinates extends HashMap <Station, Coordinates> {
     private int x;
     private int y;
 
