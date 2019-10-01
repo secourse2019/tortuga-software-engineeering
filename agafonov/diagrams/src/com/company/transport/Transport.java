@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class Transport implements IUsedTypeOfFuel {
     private int number;
     private Timetable timetable;
-    private int fuel = 100;
+    private int fuel = 50;
     private Branches branches;
     private ArrayList<Passanger> passangers;
     private Driver driver;
@@ -19,7 +19,7 @@ public class Transport implements IUsedTypeOfFuel {
     public Transport(int number, Timetable timetable, int fuel, Branches branches, ArrayList<Passanger> passangers, Driver driver, Types typeOfFuel) {
         setTransportNumber(number);
         setTimetable(timetable);
-        setFuel(fuel);
+        this.fuel = fuel;
         setPassangers(passangers);
         setDriver(driver);
         this.branches = branches;
@@ -38,8 +38,10 @@ public class Transport implements IUsedTypeOfFuel {
         this.driver = driver;
     }
 
-    public void setFuel(int fuel) {
-        this.fuel = fuel;
+    public void fillFuel(int fuel) {
+        if (fuel >= 100) this.fuel = 100;
+        if (fuel <= 0) this.fuel += 0;
+        if(fuel < 100 && fuel > 0) this.fuel += fuel;
     }
 
     public int getFuel() {

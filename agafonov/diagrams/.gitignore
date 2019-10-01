@@ -12,12 +12,7 @@
 .idea/jsLibraryMappings.xml
 
 # Her ego znaet kakie ento faili
-.idea/description.html
-.idea/encodings.xml
-.idea/misc.xml
-.idea/modules.xml
-.idea/project-template.xml
-.diagrams.iml
+.idea
 
 # Sensitive or high-churn files:
 .idea/dataSources.ids

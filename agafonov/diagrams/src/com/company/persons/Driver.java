@@ -4,14 +4,14 @@ import com.company.transport.Transport;
 
 public class Driver extends Employee {
 
-    private int fuel;
+    private Transport currentTransport;
 
-    Driver(String name, String surname, int age, int health, int salary, int fuel) {
+    Driver(String name, String surname, int age, int health, int salary, int fuel, Transport currentTransport) {
         super(name, surname, age, salary, health);
+        this.currentTransport = currentTransport;
     }
 
-    public void fillFuel(Transport t, int fuel) {
-        t.setFuel(fuel);
-        System.out.println("Fuel filled");
+    public void fillFuel(int count) {
+        this.currentTransport.fillFuel(count);
     }
 }

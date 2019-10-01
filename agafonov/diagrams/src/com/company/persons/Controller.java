@@ -7,8 +7,8 @@ import com.company.persons.employeeEquipment.controllerEquipment.CameraOfControl
 import java.util.ArrayList;
 
 public class Controller extends Employee {
-    ControllerShaitanMachine shaitanMachine;
-    CameraOfController camera;
+    private ControllerShaitanMachine shaitanMachine;
+    private CameraOfController camera;
 
     public Controller(String name, String surname, int age, int health, int salary) {
         super(name, surname, age, salary, health);
@@ -26,6 +26,7 @@ public class Controller extends Employee {
             shaitanMachine.beepOfShaitanMachine();
             if(!passangers.get(i).getIsPayed()) {
                 passangers.get(i).subHealth(10);
+                camera.addIntruder(passangers.get(i));
                 beatThePidor();
             }
             System.out.println("spasibo pidor");
