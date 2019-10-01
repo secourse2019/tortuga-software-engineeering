@@ -1,6 +1,6 @@
 package com.company.transport;
 
-enum EnumPayments{
+enum EnumPayments {
     ticket, token, card
 }
 

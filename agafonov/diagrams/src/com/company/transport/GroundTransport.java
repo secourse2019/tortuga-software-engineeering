@@ -1,20 +1,23 @@
 package com.company.transport;
 
-import com.company.route.Route;
 import com.company.persons.Driver;
 import com.company.persons.Passanger;
-import com.company.persons.Controllers;
+import com.company.persons.Controller;
+import com.company.route.Branches;
+import com.company.timetable.Timetable;
 
-public class GroundTransport extends Transport{
+import java.util.ArrayList;
 
-    private Controllers controller;
+public class GroundTransport extends Transport {
 
-    GroundTransport(int number, int[] timetable, int fuel, Route route, Passanger[] passangers, Driver driver, Controllers controller, Types typeOfFuel){
-        super(number, timetable, fuel, route, passangers, driver, typeOfFuel);
+    private Controller controller;
+
+    GroundTransport(int number, Timetable timetable, int fuel, Branches branches, ArrayList<Passanger> passangers, Driver driver, Controller controller, Types typeOfFuel) {
+        super(number, timetable, fuel, branches, passangers, driver, typeOfFuel);
         setController(controller);
     }
 
-    public void setController(Controllers controller){
+    public void setController(Controller controller) {
         this.controller = controller;
     }
 }

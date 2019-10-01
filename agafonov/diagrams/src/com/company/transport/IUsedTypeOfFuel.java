@@ -1,6 +1,6 @@
 package com.company.transport;
 
-enum Types{
+enum Types {
     electric, petrol
 }
 
