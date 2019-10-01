@@ -7,7 +7,7 @@ import com.company.Route;
 import com.company.Station;
 
 import javax.net.ssl.HandshakeCompletedEvent;
-import java.util.ArrayList;
+import java.util.List;
 import java.util.HashMap;
 
 public abstract class Transport implements Payments {
@@ -17,11 +17,11 @@ public abstract class Transport implements Payments {
     private int amount;
     private Route route;
     private Driver driver;
-    private ArrayList<Passanger> passangers;
+    private List<Passanger> passangers;
 
     public Transport(){}
 
-    public Transport(int number, int amount, Route route, Driver driver, ArrayList<Passanger> passangers){
+    public Transport(int number, int amount, Route route, Driver driver, List<Passanger> passangers){
         this.setNumber(number);
         this.setAmount(amount);
         this.setRoute(route);
@@ -31,7 +31,7 @@ public abstract class Transport implements Payments {
 
 
     public void stop(Station stop) { // TEST FUNCTION FOR ADDING AND DELETING PESSANGERS IN SPACE
-        ArrayList<Passanger> PassOnSt = stop.getPassangers();
+        List<Passanger> PassOnSt = stop.getPassangers();
         HashMap<String, Integer> needTr = new HashMap<String, Integer>();
         for (int i = 0; i < this.getPassangers().size(); i++) {
             if(this.getPassangers().get(i).isNeedOut(stop.getName())) {
@@ -96,11 +96,11 @@ public abstract class Transport implements Payments {
         this.driver = driver;
     }
 
-    public ArrayList<Passanger> getPassangers() {
+    public List<Passanger> getPassangers() {
         return passangers;
     }
 
-    public void setPassangers(ArrayList<Passanger> passangers) {
+    public void setPassangers(List<Passanger> passangers) {
         this.passangers = passangers;
     }
 

@@ -3,7 +3,7 @@ package com.company.Person;
 import com.company.transport.Subway;
 import com.company.transport.Transport;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class Security extends Worker {
     public Security(){}
@@ -17,7 +17,7 @@ public class Security extends Worker {
     }
 
     public void keepOrder(Subway subway) {
-        ArrayList<Passanger> passangers = subway.getPassangers();
+        List<Passanger> passangers = subway.getPassangers();
         for(int i = 0; i != passangers.size(); ++i){
             if(passangers.get(i).getCrazyLevel() > 5){
                 slapInTheAss();
@@ -26,7 +26,7 @@ public class Security extends Worker {
     }
 
     public void checkPayment(Transport transport) {
-        ArrayList<Passanger> passangers = transport.getPassangers();
+        List<Passanger> passangers = transport.getPassangers();
         for(int i = 0; i != passangers.size(); ++i){
             if(!passangers.get(i).getIsPayed()){
                 slapInTheAss();

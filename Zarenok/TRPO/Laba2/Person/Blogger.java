@@ -2,7 +2,7 @@ package com.company.Person;
 
 import com.company.transport.Transport;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class Blogger extends Worker {
     public Blogger() {}
@@ -16,7 +16,7 @@ public class Blogger extends Worker {
     }
 
     public void checkPayment(Transport transport) {
-        ArrayList<Passanger> passangers = transport.getPassangers();
+        List<Passanger> passangers = transport.getPassangers();
         for(int i = 0; i != passangers.size(); ++i){
             if(!passangers.get(i).getIsPayed()){
                 slapInTheAss();

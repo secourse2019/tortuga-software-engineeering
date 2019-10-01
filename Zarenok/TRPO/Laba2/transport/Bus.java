@@ -5,10 +5,10 @@ import com.company.Person.Driver;
 import com.company.Person.Passanger;
 import com.company.Route;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class Bus extends GroundTransport {
-    public Bus(int number, int amount, Route route, Driver driver, ArrayList<Passanger> passangers, Blogger blogger){
+    public Bus(int number, int amount, Route route, Driver driver, List<Passanger> passangers, Blogger blogger){
         super(number, amount, route, driver, passangers, blogger);
         this.setName("Bus");
     }
