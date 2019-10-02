@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FIrstUMLLab
+﻿namespace FIrstUMLLab
 {
     public class Driver : Worker
     {
-        public Driver(int salary) : base(salary)
+        public Driver(int salary, string name, string surname, int age)
+            : base(salary, name, surname, age)
         { }
 
         public void Drive()

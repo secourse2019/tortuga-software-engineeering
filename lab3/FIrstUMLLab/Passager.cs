@@ -1,24 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FIrstUMLLab
+﻿namespace FIrstUMLLab
 {
     public class Passager : Person
     {
         public bool IsPayed { get; private set; } = false;
-        public Transport UseTransport { get; private set; }
+        public Transport UseTransport { get; set; }
 
-        public Passager(Transport transport)
+        public Passager()
         {
-            this.UseTransport = transport;
         }
 
-        public void Payed()
+        public void Pay()
         {
-
         }
     }
 }

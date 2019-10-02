@@ -1,12 +1,19 @@
-﻿namespace FIrstUMLLab
+﻿using System.Collections.Generic;
+
+namespace FIrstUMLLab
 {
     class Subway : UndergroundTransport
     {
-        public Turnstiles Turnstiles { get; private set; }
+        public List<Turnstiles> Turnstiles { get; private set; }
 
         public Subway()
         {
-            this.Turnstiles = new Turnstiles();
+            this.Turnstiles = new List<Turnstiles>()
+            {
+                new Turnstiles(),
+                new Turnstiles(),
+                new Turnstiles()
+            };
         }
     }
 }

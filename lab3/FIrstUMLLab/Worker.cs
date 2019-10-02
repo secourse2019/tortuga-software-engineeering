@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FIrstUMLLab
+﻿namespace FIrstUMLLab
 {
     public class Worker : Person
     {
         public int Salary { get; private set; }
 
-        public Worker(int salary)
+        public Worker(int salary, string name, string surname, int age)
+            : base(name, surname, age)
         {
             this.Salary = salary;
         }
