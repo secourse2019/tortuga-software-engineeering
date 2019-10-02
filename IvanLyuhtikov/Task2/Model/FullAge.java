@@ -33,7 +33,7 @@ public class FullAge extends Passanger {
     /**
      * @return
      */
-    public bool isWasted() {
+    public boolean isWasted() {
         // TODO implement here
         return null;
     }

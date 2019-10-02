@@ -15,7 +15,7 @@ public class Transport {
     /**
      * 
      */
-    public interger number;
+    public Integer number;
 
     /**
      * 
@@ -25,7 +25,7 @@ public class Transport {
     /**
      * 
      */
-    public array timetable;
+    public Array timetable;
 
     /**
      * @param number 

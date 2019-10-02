@@ -15,7 +15,7 @@ public class Route {
     /**
      * 
      */
-    public interger number;
+    public Integer number;
 
     /**
      * 
@@ -25,7 +25,7 @@ public class Route {
     /**
      * 
      */
-    public array stations;
+    public Array stations;
 
 
     /**

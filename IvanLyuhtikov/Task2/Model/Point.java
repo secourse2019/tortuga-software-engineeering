@@ -15,12 +15,12 @@ public class Point {
     /**
      * 
      */
-    public interger x;
+    public Integer x;
 
     /**
      * 
      */
-    public interger y;
+    public Integer y;
 
 
     /**

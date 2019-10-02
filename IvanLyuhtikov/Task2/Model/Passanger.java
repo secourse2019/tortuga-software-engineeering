@@ -15,7 +15,7 @@ public class Passanger extends Person {
     /**
      * 
      */
-    public bool isPayed;
+    public boolean isPayed;
 
     /**
      * 

@@ -15,12 +15,12 @@ public class Person {
     /**
      * 
      */
-    public string name;
+    public String name;
 
     /**
      * 
      */
-    public string surname;
+    public String surname;
 
     /**
      * 

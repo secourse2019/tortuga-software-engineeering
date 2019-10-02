@@ -15,7 +15,7 @@ public class Station {
     /**
      * 
      */
-    public string name;
+    public String name;
 
     /**
      * 

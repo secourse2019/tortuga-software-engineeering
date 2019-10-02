@@ -15,7 +15,7 @@ public class SchoolBoy extends Passanger {
     /**
      * 
      */
-    public bool travelCard;
+    public boolean travelCard;
 
     /**
      * @param bloger 

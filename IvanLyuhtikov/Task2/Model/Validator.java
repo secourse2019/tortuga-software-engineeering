@@ -20,7 +20,7 @@ public class Validator {
      * @param unit UP 
      * @return
      */
-    public bool payment(void unit UP) {
+    public boolean payment(void unit UP) {
         // TODO implement here
         return null;
     }

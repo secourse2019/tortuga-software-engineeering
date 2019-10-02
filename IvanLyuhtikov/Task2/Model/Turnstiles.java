@@ -17,7 +17,7 @@ public class Turnstiles implements Payment {
      * @param unit UP 
      * @return
      */
-    public bool payment(void unit UP) {
+    public boolean payment(void unit UP) {
         // TODO implement here
         return null;
     }
@@ -26,7 +26,7 @@ public class Turnstiles implements Payment {
      * @param unit UP 
      * @return
      */
-    public bool payment(void unit UP) {
+    public boolean payment(void unit UP) {
         // TODO implement here
         return null;
     }
