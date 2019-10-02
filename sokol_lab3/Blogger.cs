@@ -8,7 +8,10 @@ namespace DiagrammaApp
 {
     class Blogger : Worker
     {
-        public Blogger() { }
+        public Blogger(int salary) : base(salar)
+        {
+
+        }
 
         public void SheckPayment() { }
 
