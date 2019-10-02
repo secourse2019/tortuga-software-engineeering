@@ -9,7 +9,10 @@ public class Transport {
     /**
      * Default constructor
      */
-    public Transport() {
+    public Transport(Integer number, Route route, Array timetable) {
+        this.number = number;
+        this.route = route;
+        this.timetable = timetable;
     }
 
     /**

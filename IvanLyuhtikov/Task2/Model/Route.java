@@ -9,7 +9,10 @@ public class Route {
     /**
      * Default constructor
      */
-    public Route() {
+    public Route(Integer number, Transport transport, Array stations) {
+        this.number = number;
+        this.transport = transport;
+        this.stations = stations
     }
 
     /**

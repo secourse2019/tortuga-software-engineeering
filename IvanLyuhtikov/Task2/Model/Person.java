@@ -9,7 +9,21 @@ public class Person {
     /**
      * Default constructor
      */
+    public Person(String name, String surname, int age, BigDecimal money) {
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+        this.money = money;
+    }
+    /**
+     * 
+     */
+    
     public Person() {
+        this.name = "Vasya"
+        this.surrname = "Pupkin"
+        this.age = 24
+        this.money = 100
     }
 
     /**
@@ -26,6 +40,11 @@ public class Person {
      * 
      */
     public int age;
+
+    /**
+     * 
+     */
+    public BigDecimal money;
 
     /**
      * @param name 

@@ -9,7 +9,10 @@ public class Worker extends Person {
     /**
      * Default constructor
      */
-    public Worker() {
+    public Worker(int salary, int experience) {
+        super.Person();
+        this.salary = salary;
+        this.experience = experience;
     }
 
     /**

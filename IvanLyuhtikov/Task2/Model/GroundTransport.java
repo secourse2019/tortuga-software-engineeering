@@ -9,7 +9,9 @@ public class GroundTransport extends Transport {
     /**
      * Default constructor
      */
-    public GroundTransport() {
+    public GroundTransport(Driver driver, Bloger bloger) {
+        this.driver = driver;
+        this.bloger = bloger;
     }
 
     /**

@@ -9,7 +9,8 @@ public class Bloger extends Worker {
     /**
      * Default constructor
      */
-    public Bloger() {
+    public Bloger(int salary, int experience) {
+        super.Worker(salary, experience);
     }
 
     /**

@@ -15,7 +15,7 @@ public class Passanger extends Person {
     /**
      * 
      */
-    public boolean isPayed;
+    public boolean isPayed = false;
 
     /**
      * 
@@ -33,7 +33,10 @@ public class Passanger extends Person {
      * @return
      */
     public void Payed() {
-        // TODO implement here
+        if super.money >= 10 {
+            this.isPayed = true;
+        }
+        super.money -= 10;
         return null;
     }
 

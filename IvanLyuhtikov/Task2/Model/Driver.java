@@ -22,16 +22,15 @@ public class Driver extends Worker {
     /**
      * @return
      */
-    public void workingTime() {
-        // TODO implement here
-        return null;
-    }
+    public Time workingTime;
 
     /**
      * @return
      */
     public void drive() {
-        // TODO implement here
+        while (workingTime != 0) {
+            workingTime -= 1
+        }
         return null;
     }
 
