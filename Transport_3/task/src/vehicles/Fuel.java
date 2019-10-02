@@ -1,10 +1,17 @@
 package vehicles;
 
 public class Fuel {
-    Integer litres;
+    private int litres;
 
-    public Fuel(){};
-    Fuel(Integer litres){
+    Fuel(int litres){
+        this.litres = litres;
+    }
+
+    public int getLitres() {
+        return litres;
+    }
+
+    public void setLitres(int litres) {
         this.litres = litres;
     }
 }

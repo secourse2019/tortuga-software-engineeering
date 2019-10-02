@@ -1,16 +1,32 @@
 package department;
 
+import geolocation.Geolocation;
 import people.Employee;
+import java.util.List;
 
-import java.util.ArrayList;
+public class Office implements Department {
+    private Geolocation geolocation;
+    private List<Employee> employees;
 
-public class Office {
-    Integer address;
-    private ArrayList<Employee> employee;
+    Office(Geolocation geolocation){
+        this.geolocation = geolocation;
+    }
 
-    public Office(){};
-    Office(Integer address, ArrayList <Employee> employee){
-        this.address = address;
-        this.employee = employee;
+    @Override
+    public void hireEmployee(Employee employee) {
+        employees.add(employee);
+    }
+
+    @Override
+    public void sackEmployee(int index) {
+        employees.remove(index);
+    }
+
+    public Geolocation getGeolocation() {
+        return geolocation;
+    }
+
+    public void setGeolocation(Geolocation geolocation) {
+        this.geolocation = geolocation;
     }
 }

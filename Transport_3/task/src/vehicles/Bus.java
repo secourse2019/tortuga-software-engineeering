@@ -1,16 +1,18 @@
 package vehicles;
 
-import people.Passangers;
-import transport.GroundTransport;
+import traffic.Routes;
+import transport.FuelTransport;
 
-public class Bus extends GroundTransport{
-    public void fillFuel(GroundTransport transport){
-        System.out.println("Fill fuel");
+
+public class Bus extends FuelTransport {
+
+    Bus(Integer engineType, String number, Routes routes)
+    {
+        super(engineType, number, routes);
     }
 
     @Override
     public void run() {
         System.out.println("Bus is running");
     }
-
 }

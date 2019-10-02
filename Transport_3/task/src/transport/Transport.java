@@ -1,19 +1,42 @@
 package transport;
 
-import people.Passangers;
+import people.Driver;
+import people.Passengers;
+import java.util.List;
 
-import java.util.ArrayList;
+public abstract class Transport {
+    private List<Passengers> passangers;
+    private String number;
+    private Driver driver;
 
-public class Transport {
-    public void run(){}
-    private ArrayList<Passangers> passangers;
+    Transport(String number) {
+        this.number = number;
+    }
 
-    public ArrayList<Passangers> getPassangers(){
+    public List<Passengers> getPassengers(){
         return passangers;
     }
 
-    public void addPassangers(Passangers pass){
+    public void addPassengers(Passengers pass){
         this.passangers.add(pass);
+    }
+
+    public abstract void run();
+
+    public Driver getDriver() {
+        return driver;
+    }
+
+    public void setDriver(Driver driver) {
+        this.driver = driver;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
     }
 }
 

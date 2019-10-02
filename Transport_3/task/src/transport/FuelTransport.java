@@ -1,13 +1,21 @@
 package transport;
 
-public abstract class FuelTransport {
+import traffic.Routes;
 
-    Integer engineType;
+public abstract class FuelTransport extends GroundTransport {
 
-    abstract void toFuel();
+    private Integer engineType;
 
-    public FuelTransport(){};
-    FuelTransport(Integer engineType){
+    public FuelTransport(Integer engineType, String number, Routes routes){
+        super(number, routes);
+        this.engineType = engineType;
+    }
+
+    public Integer getEngineType() {
+        return engineType;
+    }
+
+    public void setEngineType(Integer engineType) {
         this.engineType = engineType;
     }
 }

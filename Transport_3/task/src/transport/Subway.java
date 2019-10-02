@@ -1,13 +1,12 @@
 package transport;
 
-import people.Passangers;
+public class Subway extends ElectricTransport {
 
+    Subway(ElectricEngineTypes engineType, String number) {
+        super(engineType, number);
+    }
 
-public class Subway implements Transport {
-
-    @Override
     public void run() {
         System.out.println("Subway is running");
     }
-
 }
