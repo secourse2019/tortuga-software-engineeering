@@ -2,24 +2,20 @@ package com.company.Depo.Transport.props;
 
 import com.company.Depo.Transport.Transport;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class Garage {
-    private ArrayList<Transport> transportArrayList;
+    private List<Transport> transportList;
 
-    public Garage(ArrayList<Transport> transportArrayList) {
-        this.transportArrayList = transportArrayList;
+    public Garage(List<Transport> transportList) {
+        this.transportList = transportList;
     }
 
-    public Garage(int i) {
-
+    public List<Transport> getTransportList() {
+        return transportList;
     }
 
-    public ArrayList<Transport> getTransportArrayList() {
-        return transportArrayList;
-    }
-
-    public void setTransportArrayList(ArrayList<Transport> transportArrayList) {
-        this.transportArrayList = transportArrayList;
+    public void setTransportList(List<Transport> transportList) {
+        this.transportList = transportList;
     }
 }

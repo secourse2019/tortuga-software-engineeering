@@ -2,27 +2,16 @@ package com.company.Depo;
 
 import com.company.Depo.Department.OfficeDepartment;
 import com.company.Depo.Employer.Employer;
+import com.company.Depo.Transport.Transport;
 import com.company.Depo.Transport.props.Garage;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class Depo {
-    private static final Garage transportArrayList;
-
-    static {
-        transportArrayList = new Garage(11);
-    }
-
-    private ArrayList employerList = new ArrayList();
+    private List employerList;
     private String stationName;
     private OfficeDepartment officeDepartment;
     private Garage garage;
-
-    /**
-     */
-    Depo() {
-        this("Serebrjanka's Depo",77 , transportArrayList);
-    }
 
     /**
      * @param stationName
@@ -33,13 +22,14 @@ public class Depo {
         this.setStationName(stationName);
         this.setOfficeDepartment(officeDepartment);
         this.setGarage(garage);
+        this.employerList = employerList;
     }
 
     public ArrayList<Employer> getEmployerList() {
         return employerList;
     }
 
-    public void setEmployerList(ArrayList<Employer> employerList) {
+    public void setEmployerList(List<Employer> employerList) {
         this.employerList = employerList;
     }
 

@@ -4,10 +4,11 @@ import com.company.Depo.PaymentSystem.PaymentSystem;
 import com.company.Depo.Transport.props.Fuel;
 
 import com.company.Depo.Transport.props.Platform;
-import com.company.Util.Pair;
+
+import java.util.Map;
 
 public class Transport {
-    private Pair<Fuel, Integer> tank;
+    private Map<Fuel, Integer> type;
     private int damage;
     private Platform current;
     private String number;
@@ -18,21 +19,36 @@ public class Transport {
     public Transport(Platform current, String number, Fuel fuel, TransportType type, PaymentSystem pay) {
         this.current = current;
         this.number = number;
-        tank = new Pair<Fuel, Integer>(fuel, 0);
-        this.type = type;
+        this.type.put(fuel,  0);
         this.pay = pay;
     }
 
     public Transport(Platform road, int i, Fuel oil, int i1, TransportType bus, PaymentSystem cash) {
     }
 
-    public void willSpendOnTheRoad(int distance) {
-        if(tank.second < distance / 10) {
+    public void willSpendOnTheRoad(int distance, boolean nec) {
+        if(necessity(nec) && type.get(1).volume < distance / 10) {
             refueling();
         }
     }
 
+    boolean necessity(boolean nec) {
+        return nec;
+    }
+
     public void refueling() {
-        tank.second = 55;
+        type.get(1).volume = 55;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    public PaymentSystem getPay() {
+        return pay;
     }
 }
