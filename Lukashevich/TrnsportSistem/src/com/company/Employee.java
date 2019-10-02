@@ -8,8 +8,7 @@ public class Employee
     private String surname;
     public Position position;
 
-    public Employee()
-    {
+    public Employee() {
         countID++;
         this.id = countID;
     }

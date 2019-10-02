@@ -1,10 +1,12 @@
 package com.company;
 
+import java.util.List;
+
 public class Route
 {
-    public Station[] stations;
+    public List<Station> stations;
 
-    public  Route(Station[] stations)
+    public  Route(List<Station> stations)
     {
         this.stations = stations;
     }

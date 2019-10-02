@@ -9,7 +9,7 @@ public class Transport
     private Route route;
     private Driver driver;
     public int nomber;
-    public ArrayList<Passager> passagers = new ArrayList<Passager>();
+    public ArrayList<Passager> passagers;
 
     public Transport(Route r, Driver d, int n)
     {
@@ -18,6 +18,7 @@ public class Transport
         this.route = r;
         count++;
         this.id = count;
+        passagers = new ArrayList<Passager>();
     }
 
     public void ChangeDriver (Driver d)
