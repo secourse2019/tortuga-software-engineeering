@@ -1,25 +1,26 @@
 package com.company.Transport.dpo.departmant;
 
 import com.company.Transport.dpo.transport.TransportCreator;
-import java.util.ArrayList;
+
+import java.util.AbstractList;
 
 public class Garage implements Department {
 
-    private ArrayList<TransportCreator> transportList;
+    private AbstractList<TransportCreator> transportList;
 
-    Garage(ArrayList<TransportCreator> transportList) {
+    Garage(AbstractList<TransportCreator> transportList) {
         this.transportList = transportList;
     }
 
-    private void Fix() {
+    private void fix() {
         System.out.println("Fixed all problems");
     }
 
-    public ArrayList<TransportCreator> getTransportList() {
+    public AbstractList<TransportCreator> getTransportList() {
         return transportList;
     }
 
-    public void setTransportList(ArrayList<TransportCreator> transportList) {
+    public void setTransportList(AbstractList<TransportCreator> transportList) {
         this.transportList = transportList;
     }
 }

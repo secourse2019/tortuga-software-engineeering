@@ -4,10 +4,10 @@ import com.company.Transport.PaymentSystem;
 
 public class Passenger extends Person {
 
-    PaymentSystem pey;
+    PaymentSystem pay;
 
-    Passenger(PaymentSystem pey, String name, String surname, int age) {
+    Passenger(PaymentSystem pay, String name, String surname, int age) {
         super(name, surname, age);
-        this.pey = pey;
+        this.pay = pay;
     }
 }

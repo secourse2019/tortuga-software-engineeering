@@ -4,9 +4,12 @@ import com.company.Transport.PaymentSystem;
 
 public interface Transport {
 
-    void WillSpendOnTheRoad(int distance, boolean necc);
-    void Refueling();
-    boolean Necessity(boolean nec);
+    void willSpendOnTheRoad(int distance, boolean necc);
+
+    void refueling();
+
+    boolean necessity(boolean nec);
+
     public Platform getMovementMethod();
 
     public void setMovementMethod(Platform movementMethod);
